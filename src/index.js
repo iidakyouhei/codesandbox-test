@@ -148,7 +148,7 @@
 /**
  * mapやfilterを使った配列の処理
  */
-const nameArr = ["田中", "山田", "iida"];
+// const nameArr = ["田中", "山田", "iida"];
 // for (let index = 0; index < nameArr.length; index++){
 //   console.log(`${index+1}${nameArr[index]}`)
 // }
@@ -166,11 +166,52 @@ const nameArr = ["田中", "山田", "iida"];
 
 // console.log(newNumArr);
 
-const newNameArr = nameArr.map((name) => {
-  if (name === "iida") {
-    return name;
-  } else {
-    return `${name}です`;
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "iida") {
+//     return name;
+//   } else {
+//     return `${name}です`;
+//   }
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+//ある条件？　条件がtrueの時　：　条件がfalseの時
+// const vall = 1 > 0? 'ture' : 'false';
+// console.log(vall)
+
+// const num = 1300;
+// console.log(num.toLocaleString());
+
+// const formattedNum = typeof num ==='number' ? num.toLocaleString() : '数値を入力してください';
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? '100を超えています' : '許容範囲ないです';
+// }
+// console.log(checkSum(50, 40));
+
+/**
+ * 論理演算子の本当の意味を知ろう　＆＆　｜｜
+ */
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("1か２はtrueになります")
+// }
+// if (flag1 && flag2) {
+//   console.log("1か２もtrueになります")
+// }
+
+// || は左がfalseなら右を返す
+const num = null;
+const fee = num || "金額は未設定です";
+console.log(fee);
+
+// && は　左がtrueなら右を返す
+const num2 = 100;
+const fee2 = num2 && "何か設定されなした";
+console.log(fee2);
